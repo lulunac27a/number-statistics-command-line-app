@@ -27,10 +27,10 @@ while true
             println("Quartile: ", quantile(numbers, quartile))
         else
             break
-            println("Invalid input. It will now print the statistics.")
+            println("Invalid input. The program will now end.")
         end
     catch
         break
-        println("Invalid input. It will now print the statistics.")
+        println("Invalid input. The program will now end.")
     end
 end
