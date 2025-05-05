@@ -1,36 +1,36 @@
-using Statistics
-numbers = Int[]
+using Statistics#use statistics package for stats
+numbers = Int[]#list of numbers
 while true
-    println("Enter a number: ")
-    input = readline()
+    println("Enter a number: ")#enter number value to add to list
+    input = readline()#read input
     try
-        push!(numbers, parse(Int, input))
+        push!(numbers, parse(Int, input))#parse input as integer and add to list
     catch
-        break
+        break#if input is not a number, break out of loop and print statistics
         println("Invalid input. It will now print the statistics.")
     end
 end
-sort!(numbers)
-println("Minimum: ", minimum(numbers))
-println("First quartile: ", quantile(numbers, 0.25))
-println("Median: ", median(numbers))
-println("Third quartile: ", quantile(numbers, 0.75))
-println("Maximum: ", maximum(numbers))
-println("Mean: ", mean(numbers))
-println("Standard deviation: ", std(numbers))
+sort!(numbers)#sort numbers
+println("Minimum: ", minimum(numbers))#minimum value
+println("First quartile: ", quantile(numbers, 0.25))#first quartile
+println("Median: ", median(numbers))#median value
+println("Third quartile: ", quantile(numbers, 0.75))#third quartile
+println("Maximum: ", maximum(numbers))#maximum value
+println("Mean: ", mean(numbers))#mean value
+println("Standard deviation: ", std(numbers))#standard deviation
 while true
-    println("Enter quartile value: ")
-    input = readline()
+    println("Enter quartile value: ")#enter custom quartile value
+    input = readline()#read input
     try
-        quartile = parse(Float64, input)
-        if quartile >= 0 && quartile <= 1
-            println("Quartile: ", quantile(numbers, quartile))
+        quartile = parse(Float64, input)#parse input as float
+        if quartile >= 0 && quartile <= 1#if quartile is between 0 and 1
+            println("Quartile: ", quantile(numbers, quartile))#print quartile value
         else
-            break
-            println("Invalid input. The program will now end.")
+            break#end the program
+            println("Invalid quartile input. The program will now end.")
         end
     catch
-        break
+        break#end the program
         println("Invalid input. The program will now end.")
     end
 end
