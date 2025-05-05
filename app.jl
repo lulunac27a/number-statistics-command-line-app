@@ -7,7 +7,7 @@ while true
         push!(numbers, parse(Int, input))
     catch
         break
-        print("Invalid input. It will now print the statistics.")
+        println("Invalid input. It will now print the statistics.")
     end
 end
 sort!(numbers)
