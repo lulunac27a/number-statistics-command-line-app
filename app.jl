@@ -12,6 +12,8 @@ while true
 end
 sort!(numbers)
 println("Minimum: ", minimum(numbers))
+println("First quartile: ", quantile(numbers, 0.25))
 println("Median: ", median(numbers))
+println("Third quartile: ", quantile(numbers, 0.75))
 println("Maximum: ", maximum(numbers))
 println("Mean: ", mean(numbers))
