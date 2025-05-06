@@ -1,5 +1,5 @@
 using Statistics#use statistics package for stats
-numbers = Int[]#list of numbers
+numbers::Vector{Int} = Int[]#list of numbers
 while true
     println("Enter a number: ")#enter number value to add to list
     input = readline()#read input
@@ -22,7 +22,7 @@ while true
     println("Enter quartile value: ")#enter custom quartile value
     input = readline()#read input
     try
-        quartile = parse(Float64, input)#parse input as float
+        quartile::Float64 = parse(Float64, input)#parse input as float
         if quartile >= 0 && quartile <= 1#if quartile is between 0 and 1
             println("Quartile: ", quantile(numbers, quartile))#print quartile value
         else
