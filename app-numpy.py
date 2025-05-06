@@ -20,7 +20,8 @@ while True:
     print("Enter quartile value: ")
     quartile_input = input()
     try:
-        print("Quartile value: ", np.percentile(numbers, float(quartile_input) * 100))
+        print("Quartile value: ", np.percentile(
+            numbers, float(quartile_input) * 100))
     except ValueError:
         print("Invalid input. The program will now end.")
         break
