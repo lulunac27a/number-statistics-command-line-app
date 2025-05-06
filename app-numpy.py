@@ -6,7 +6,7 @@ while True:
     number_input = input()
     try:
         numbers = np.append(numbers, int(number_input))
-    except:
+    except ValueError:
         print("Invalid input. It will now print the statistics.")
         break
 print("Minimum: ", np.min(numbers))
