@@ -16,3 +16,11 @@ print("Third quartile: ", np.percentile(numbers, 75))
 print("Maximum: ", np.max(numbers))
 print("Mean: ", np.mean(numbers))
 print("Standard deviation: ", np.std(numbers))
+while True:
+    print("Enter quartile value: ")
+    quartile_input = input()
+    try:
+        print("Quartile value: ", np.percentile(numbers, float(quartile_input) * 100))
+    except ValueError:
+        print("Invalid input. The program will now end.")
+        break
