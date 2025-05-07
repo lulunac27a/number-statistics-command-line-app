@@ -6,8 +6,9 @@ while true
     try
         push!(numbers, parse(Int, input))#parse input as integer and add to list
     catch
-        break#if input is not a number, break out of loop and print statistics
         println("Invalid input. It will now print the statistics.")
+        break#if input is not a number, break out of loop and print statistics
+
     end
 end
 if length(numbers) === 0#check if list is empty
