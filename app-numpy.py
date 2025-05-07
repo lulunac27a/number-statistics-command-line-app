@@ -1,6 +1,6 @@
 import numpy as np
 
-numbers = np.array([])
+numbers = np.array([], dtype=int)
 while True:
     print("Enter a number: ")
     number_input: str = input()
