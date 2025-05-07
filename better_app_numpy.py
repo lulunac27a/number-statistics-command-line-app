@@ -1,7 +1,7 @@
 from typing import Any  # type annotations
 import numpy as np  # use NumPy library
 
-numbers = []  # array of numbers
+numbers: list[int] = []  # array of numbers
 while True:
     print("Enter a number: ")  # enter number value to add to list
     number_input: str = input()  # read input
