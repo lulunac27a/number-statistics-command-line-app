@@ -1,5 +1,5 @@
-import numpy as np
 from typing import Any
+import numpy as np
 
 numbers: np.ndarray[Any, np.dtype[np.int_]] = np.array([], dtype=int)
 while True:
