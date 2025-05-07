@@ -14,7 +14,7 @@ while True:
     except ValueError:
         print("Invalid input. It will now print the statistics.")
         break  # if input is not a number, break out of loop and print statistics
-if len(numbers) == 0:
+if len(numbers) == 0:  # check if list is empty
     print("No numbers entered. The program will now end.")
 else:
     print("Minimum: ", np.min(numbers))  # minimum value
