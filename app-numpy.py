@@ -1,6 +1,7 @@
 import numpy as np
+from typing import Any
 
-numbers = np.array([], dtype=int)
+numbers: np.ndarray[Any, np.dtype[np.int_]] = np.array([], dtype=int)
 while True:
     print("Enter a number: ")
     number_input: str = input()
