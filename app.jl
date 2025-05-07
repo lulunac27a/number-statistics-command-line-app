@@ -8,7 +8,6 @@ while true
     catch
         println("Invalid input. It will now print the statistics.")
         break#if input is not a number, break out of loop and print statistics
-
     end
 end
 if length(numbers) === 0#check if list is empty
@@ -26,9 +25,9 @@ else
         println("Enter quartile value: ")#enter custom quartile value
         input = readline()#read input
         try
-            quartile::Float64 = parse(Float64, input)#parse input as float
-            if quartile >= 0 && quartile <= 1#if quartile is between 0 and 1
-                println("Quartile: ", quantile(numbers, quartile))#print quartile value
+            quartile_value::Float64 = parse(Float64, input)#parse input as float
+            if quartile_value >= 0 && quartile_value <= 1#if quartile is between 0 and 1
+                println("Quartile: ", quantile(numbers, quartile_value))#print quartile value
             else
                 println("Invalid quartile input. The program will now end.")
                 break#end the program
