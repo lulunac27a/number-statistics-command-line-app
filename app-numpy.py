@@ -3,7 +3,7 @@ import numpy as np
 numbers = np.array([])
 while True:
     print("Enter a number: ")
-    number_input = input()
+    number_input: str = input()
     try:
         numbers = np.append(numbers, int(number_input))
     except ValueError:
@@ -18,7 +18,7 @@ print("Mean: ", np.mean(numbers))
 print("Standard deviation: ", np.std(numbers))
 while True:
     print("Enter quartile value: ")
-    quartile_input = input()
+    quartile_input: str = input()
     try:
         print(
             "Quartile value: ",
